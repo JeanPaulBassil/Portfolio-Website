@@ -5,19 +5,19 @@ import { DiCssdeck } from 'react-icons/di';
 
 import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span} from './HeaderStyles';
 
-export default function Header(){
-  const navNames = ['Projects', 'Technologies', 'About']
+export default function Header() {
+  const navNames = ['Projects', 'Technologies', 'About'];
   const navBar = navNames.map(name => {
     return (
       <li>
-         <Link href={`#${name.toLowerCase()}`}>
-           <NavLink>{name}</NavLink>
-         </Link>
+        <Link href={`#${name.toLowerCase()}`}>
+          <NavLink>{name}</NavLink>
+        </Link>
       </li>
     )
   })
 
-  const socials = [
+  const socialNames = [
     {
       icon: <AiFillGithub size="3rem"/>,
       link: 'https://github.com/JeanPaulBassil'
@@ -32,32 +32,31 @@ export default function Header(){
     }
   ]
 
-  const socialLinks = socials.map(social => {
+  const socialIcons = socialNames.map(link => {
     return (
-      <SocialIcons href={social.link} target='blank'>
-        {social.icon}
+      <SocialIcons href={link.link}>
+        {link.icon}
       </SocialIcons>
     )
   })
   
   return (
     <Container>
-      <Div1>
-        <li>
-          <Link href="/">
-            <a style={{color: 'white', display: 'flex', alignItems: 'center', marginBottom: '20px'}}>
-              <DiCssdeck size='3rem'/>
-              <Span>Portfolio</Span>
-            </a>
-          </Link>
-        </li>
-      </Div1>
-      <Div2>
-        {navBar}
-      </Div2>
-      <Div3>
-        {socialLinks}
-      </Div3>
-    </Container>
-  )
-}
+    <Div1>
+      <Link href="/">
+      <a style={{ display: "flex", alignItems: "center", color: "white"}}>
+        <DiCssdeck  size="3rem"/>
+        <span>Portfolio</span>
+      </a>
+      </Link>
+    </Div1>
+    <Div2>
+      {navBar}
+    </Div2>
+    <Div3>
+      {socialIcons}
+    </Div3>
+  </Container>
+);
+};
+

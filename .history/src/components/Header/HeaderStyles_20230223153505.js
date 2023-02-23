@@ -23,6 +23,9 @@ export const Span = styled.span`
 `; 
 
 
+// export const Span = styled.span`
+//   font-size: 2rem;
+// `;
 
 export const Div1 = styled.div`
   grid-area: 1 / 1 / 2 / 2;

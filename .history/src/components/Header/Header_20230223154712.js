@@ -34,9 +34,7 @@ export default function Header(){
 
   const socialLinks = socials.map(social => {
     return (
-      <SocialIcons href={social.link} target='blank'>
-        {social.icon}
-      </SocialIcons>
+      <SocialIcons href={social.link}></SocialIcons>
     )
   })
   
@@ -56,8 +54,66 @@ export default function Header(){
         {navBar}
       </Div2>
       <Div3>
-        {socialLinks}
+        
       </Div3>
     </Container>
   )
 }
+
+
+
+// export default function Header() {
+//   const navNames = ['Projects', 'Technologies', 'About'];
+//   const navBar = navNames.map(name => {
+//     return (
+//       <li>
+//         <Link href={`#${name.toLowerCase()}`}>
+//           <NavLink>{name}</NavLink>
+//         </Link>
+//       </li>
+//     )
+//   })
+
+//   const socialNames = [
+//     {
+//       icon: <AiFillGithub size="3rem"/>,
+//       link: 'https://github.com/JeanPaulBassil'
+//     },
+//     {
+//       icon: <AiFillLinkedin size="3rem"/>,
+//       link: 'https://www.linkedin.com/in/jean-paul-bassil/'
+//     },
+//     {
+//       icon: <AiFillInstagram size= '3rem'/>,
+//       link: 'https://www.instagram.com/jayp.dev/'
+//     }
+//   ]
+
+//   const socialIcons = socialNames.map(link => {
+//     return (
+//       <SocialIcons href={link.link}>
+//         {link.icon}
+//       </SocialIcons>
+//     )
+//   })
+  
+//   return (
+//     <Container>
+//     <Div1>
+//       <Link href="/">
+//       <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20px'}}>
+//         <DiCssdeck  size="3rem"/>
+//         <Span>Portfolio</Span>
+//       </a>
+//       </Link>
+//     </Div1>
+//     <Div2>
+//       {navBar}
+//     </Div2>
+//     <Div3>
+//       {socialIcons}
+//     </Div3>
+//   </Container>
+// );
+// };
+
